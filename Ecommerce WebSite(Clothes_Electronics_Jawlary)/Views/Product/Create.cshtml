@@ -1,0 +1,106 @@
+﻿@model Ecommerce_WebSite_Clothes_Electronics_Jawlary_.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-9 col-12 mb-2">
+                <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0">New Product</h2>
+                        <div class="breadcrumb-wrapper col-12">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+
+            </div>
+        </div>
+        <div class="content-body">
+            <!-- Basic Horizontal form layout section start -->
+            <section id="basic-horizontal-layouts">
+                <div class="row match-height">
+                    <div class="col-md-12 col-12">
+                        <div class="card" style="height: 420.219px;">
+                            <div class="card-header">
+
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form class="form form-horizontal" method="post" enctype="multipart/form-data" asp-action="Create" role="form">
+                                        <div class="form-body">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span>Product Name</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input asp-for="Name" class="form-control" placeholder="Product Name" />
+                                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span> Product Price </span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input asp-for="Price" class="form-control" placeholder="Product Price">
+                                                            <span asp-validation-for="Price" class="label danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span>Category</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+                                                            <span asp-validation-for="CategoryId" class="label danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span>Product Image</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="file" name="Files" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-8 offset-md-4">
+                                                    <button type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">Submit</button>
+                                                    <button type="reset" class="btn btn-outline-warning mr-1 mb-1 waves-effect waves-light">Reset</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // Basic Horizontal form layout section end -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
